@@ -1,0 +1,7 @@
+#ifndef buzzer_included
+#define buzzer_included
+
+void buzzwe_init();
+void buzzer_set_period(short);
+
+#endif
