@@ -33,6 +33,8 @@ char toggle_green()
   return changed;
 }
 
+/* switch case for all states */
+/* Creates different light patterns for the different states and different sounds */
 void state_advance()
 {
 
