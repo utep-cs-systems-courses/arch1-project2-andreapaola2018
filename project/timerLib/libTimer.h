@@ -2,10 +2,10 @@
 #define libTimer_included
 
 void configureClocks();
-void enableWDTInterrups();
+void enableWDTInterrupts();
 void timerAUpmode();
 
 unsigned char gert_sr();
-void set_sr(), or_sr, and_sr();
+void set_sr(), or_sr(), and_sr();
 
 #endif //included
