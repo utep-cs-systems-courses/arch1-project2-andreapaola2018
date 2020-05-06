@@ -7,11 +7,9 @@
 /* sets clocks, and interrupts */ 
 int main(void) {
   configureClocks(); // setting CPU and clocks 
-  led_init();
-  enableWDTInterrupts();
   switch_init();/* initiating switches */
   buzzer_init(); /* initiating buzzer  */  
-  
+  led_init();
 
-  or_sr(0x18);
+  or_sr(0x18);  /* CPU off, GIE on */
 }
