@@ -2,6 +2,7 @@
 #include "libTimer.h"
 #include "buzzer.h"
 #include "stateMachines.h"
+#include "led.h"
 
 void buzzer_init()
 {
@@ -24,7 +25,8 @@ void sound(){
   int i = 0;
   while(i<16){
     buzzer_set_period(song[i]); /* plays each note */
-    __delay_cycles(4000000); /* delays next note from playing */ 
+    __delay_cycles(4000000); /* delays next note from playing */
+    
   }
   buzzer_set_period(0); /* sound ends */
 }
