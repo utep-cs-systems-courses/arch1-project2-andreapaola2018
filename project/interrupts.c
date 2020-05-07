@@ -5,7 +5,7 @@
 void
 __interrupt_vec(WDT_VECTOR) WDT(){
   static char count = 0;
-  if(++count == 125){
+  if(++count == 20){
     state_advance();
     count = 0; 
   }
