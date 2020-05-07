@@ -4,7 +4,7 @@
 #include "switches.h"
 #include "buzzer.h"
 
-/* sets clocks, and interrupts */ 
+/*this sets clocks, and interrupts */ 
 int main(void) {
   configureClocks(); // setting CPU and clocks 
   switch_init();/* initiating switches */
