@@ -33,7 +33,8 @@ char toggle_green()
   return changed;
 }
 
-void greenOn(){
+// keeps green light on only
+char greenOn(){
 
   green_on = 1;
 }
@@ -47,12 +48,13 @@ void state_advance()
 
   static enum {R=0, G=1,OG = 2} color = G;
   switch(color){
+    
   case R:
     changed = toggle_red();
     color = G;
     break;
   case G:
-    changed = toggle_green();
+    changed = greenOn();
     color = R;
     break;
 
