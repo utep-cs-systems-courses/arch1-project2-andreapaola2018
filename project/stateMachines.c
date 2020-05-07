@@ -4,7 +4,7 @@
 #include "led.h"
 #include "buzzer.h"
 
-
+/* toggles red light */
 char toggle_red()
 {
   static char state = 0;
