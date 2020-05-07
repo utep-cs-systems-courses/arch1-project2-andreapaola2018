@@ -33,6 +33,11 @@ char toggle_green()
   return changed;
 }
 
+void greenOn(){
+
+  green_on = 1;
+}
+
 /* switch case for all states */
 /* Creates different light patterns for the different states and different sounds */
 void state_advance()
@@ -40,7 +45,7 @@ void state_advance()
 
   char changed = 0;
 
-  static enum {R=0, G=1} color = G;
+  static enum {R=0, G=1,OG = 2} color = G;
   switch(color){
   case R:
     changed = toggle_red();
@@ -50,6 +55,7 @@ void state_advance()
     changed = toggle_green();
     color = R;
     break;
+
   }
   led_changed = changed;
   led_update();
